@@ -1,4 +1,4 @@
-function show_detection(path_processed, path_incoming, base_str)
+function show_detection_ui(path_processed, path_incoming, base_str)
 %brief: 
     % Load pixel detection data
     file_str_pixel = fullfile(path_processed, strcat(base_str, '.tracks_raw.dat.mat'));
