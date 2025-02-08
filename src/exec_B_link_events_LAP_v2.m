@@ -1,4 +1,18 @@
 function exec_B_link_events_LAP_v2(path_processed, base_str, dist_cutoff)
+%pre-condition: exec_A_detect_particles was called before or array matching
+%               the xy_schw scheme is in /processed/. 
+%--------------------------------------------------------------------------
+%brief:         LAPJV linking of particles. See also lapjv.m version 3.0 by Yi Cao 
+%               at Cranfield University on 10th April 2013.
+%--------------------------------------------------------------------------
+%param:         
+%               path_processed: string path to where detection data can be 
+%                               found and linking data should be saved.
+%               base_str:       string of the current movie tracks.
+%               dist_cutoff:    The highest distance in pixels squared to
+%                               particles can have and still be linked.              
+%--------------------------------------------------------------------------
+%returns:       nothing.
     % Load data
     tmp = load(fullfile(path_processed, strcat(base_str, '.tracks_raw.dat.mat')));
     xy_schw = tmp.data;
