@@ -3,7 +3,7 @@ function A_create_B_C_scripts(output_script,script_name)
     
     % Define the line to replace (the target line to be substituted)
     targetLine = 'exec_A_detect_local_max_v2(xstart, xend, ystart, yend, fluo_cutoff, del, base_str, "./incoming/", "./processed/", Ndim, xdim, ydim);';
-    create_script_line_B = 'A_create_B_C_scripts("./AB_main.m","exec_B_link_events_NN_v4(dist_cutoff,del,base_str,""./processed/"")")';
+    create_script_line_B = 'A_create_B_C_scripts("./AB_main.m","exec_B_link_events_LAP_v2(""./processed/"")", base_str, dist_cutoff)';
     create_script_line_C = 'A_create_B_C_scripts("./AC_main.m", "exec_C_subpix_det_Gauss_v2(xstart, xend, ystart, yend, del, base_str, ""./incoming/"", ""./processed/"", xdim, ydim)")';
     % Open the input and output files
     fid_in = fopen("AA_main.m", 'r');

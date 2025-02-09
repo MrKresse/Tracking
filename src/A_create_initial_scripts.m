@@ -37,7 +37,7 @@ function A_create_initial_scripts(selected_path, xstart,xend,ystart,yend,dt,pix_
                     fprintf(fidA,'\n');
                 end
         end
-        fprintf(fidA, 'A_create_B_C_scripts("./AB_main.m","exec_B_link_events_NN_v4(dist_cutoff,del,base_str,""./processed/"")")\n');
+        fprintf(fidA, 'A_create_B_C_scripts("./AB_main.m","exec_B_link_events_LAP_v2(""./processed/"",base_str,dist_cutoff)")\n');
         fprintf(fidA, 'A_create_B_C_scripts("./AC_main.m", "exec_C_subpix_det_Gauss_v2(xstart, xend, ystart, yend, del, base_str, ""./incoming/"", ""./processed/"", xdim, ydim)")');
 
         
